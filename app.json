@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "document-scanner",
+    "slug": "document-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": [
+      [
+        "react-native-document-scanner-plugin",
+        {
+          "cameraPermission": "We need camera access, so you can scan documents"
+        }
+      ],
+      [
+              "react-native-background-geolocation", {
+                "license": "YOUR_LICENSE_KEY_HERE"
+              }
+            ],
+            [
+              "expo-gradle-ext-vars", {
+               "googlePlayServicesLocationVersion": "20.0.0",
+                "appCompatVersion": "1.4.2"
+              }
+            ],
+            "react-native-background-fetch"
+    ],
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ahmedhanzala.documentscanner"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ahmedhanzala.documentscanner"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7152263b-ec53-4132-99ef-2e03ce753fcb"
+      }
+    }
+  }
+}
