@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import * as Location from "expo-location";
 import { Camera, CameraType } from "expo-camera";
-import DocumentScannerOne from "./DocumentScannerOne";
 import StackNavigator from "./navigation/StackNavigator";
 
 export default function App() {
-  const [location, setLocation] = useState(null);
-  const [locationPermissionStatus, setlocationPermissionStatus] =
-    useState(null);
-  const [type, setType] = useState(CameraType.back);
+  const [locationPermissionStatus, setlocationPermissionStatus] = useState(null);
   const [cameraPermission, setCameraPermission] = useState(false);
+  const [type, setType] = useState(CameraType.back);
 
   function toggleCameraType() {
     setType((current) =>
@@ -33,8 +29,6 @@ export default function App() {
       setlocationPermissionStatus("Permission to access location was denied");
       return;
     }
-    let location = await Location.getCurrentPositionAsync({});
-    setLocation(location);
   };
 
   useEffect(() => {
@@ -46,29 +40,3 @@ export default function App() {
     <StackNavigator/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "flex-end",
-    marginBottom:20,
-  },
-  camera: {
-    flex: 1,
-  },
-  buttonContainer: {
-    flex: 1,
-    flexDirection: "row",
-    backgroundColor: "transparent",
-  },
-  button: {
-    flex: 1,
-    alignSelf: "flex-end",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "white",
-  },
-});
