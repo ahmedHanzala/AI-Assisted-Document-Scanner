@@ -32,7 +32,7 @@
 </ol>
 
 <p>
-  For detailed instructions, please refer to the <a href="https://github.com/your-username/ai-assisted-document-scanner/blob/main/docs/installation.md">installation guide</a>.
+  For detailed instructions, please refer to the <a href="https://reactnative.dev/docs/environment-setup">installation guide</a>.
 </p>
 
 <h2>Usage</h2>
@@ -47,5 +47,5 @@
 </ol>
 
 <p>
-  For more information on using the application, please refer to the <a href="https://github.com/your-username/ai-assisted-document-scanner/blob/main/docs/user-guide.md">user guide</a>.
+  NOTE: This repository is not being actively maintained. feel free to fork and improve :D
 </p>
